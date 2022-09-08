@@ -60,4 +60,4 @@ The following contain the necessary links for creating a virtual machine: <br> <
 
 
 <h3>What if I have already used my Azure student credits?</h3>
-If you have already used your credicts, reach out to us on either <a href="https://discord.gg/R9cvaZyzdu">discord</a> or on <a href="mailto:DMiAI@ambolt.io">DMiAI@ambolt.io</a> and we will help you out.<br>
+If you have already used your credicts, reach out to us on either <a href="https://discord.gg/QhTt4Me2AQ">discord</a> or on <a href="mailto:DMiAI@ambolt.io">DMiAI@ambolt.io</a> and we will help you out.<br>
