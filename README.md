@@ -23,7 +23,7 @@ The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained 
 The use cases have been built on top of the <a href="https://fastapi.tiangolo.com/">FastAPI</a> framework, and should be used to specify endpoints in every use case.
 
 <h2>Discord Channel</h2>
-Come hang out and talk to other competitors of the event on our Discord channel. Discuss the use cases with each other or get in touch with any of the Ambolt staff, to solve eventual issues or questions that may arise during the competition. <a href="https://discord.gg/R9cvaZyzdu">Join here!</a> <br>
+Come hang out and talk to other competitors of the event on our Discord channel. Discuss the use cases with each other or get in touch with any of the Ambolt staff, to solve eventual issues or questions that may arise during the competition. <a href="https://discord.gg/QhTt4Me2AQ">Join here!</a> <br>
 
 <h2>Getting started without emily</h2>
 You are not required to use Emily for competing in this event, however, we strongly recommend using Emily if you are not an expert in developing APIs and microservices. If you do not choose to use Emily, you should check the individual template and find the requirements for the different API endpoints. These have to be exactly the same for the evaluation service to work. Inside the `dtos` folder you can find information on the request and response models, describing the input and output requirements for your API. 
