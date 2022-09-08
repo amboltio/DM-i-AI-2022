@@ -1,5 +1,5 @@
 # DM i AI 2022
-<h3>Welcome to the annually <a href="https://dmiai.dk/">DM i AI</a> event hosted by <a href="https://ambolt.io/">Ambolt ApS.</a></h3> <br>
+<h3>Welcome to the annual <a href="https://dmiai.dk/">DM i AI</a> event hosted by <a href="https://ambolt.io/">Ambolt ApS.</a></h3> <br>
 In this repository, you will find all the information needed to participate in the event. Please read the entire information before proceeding to the use cases, and please make sure to read the full description of every use case. You will be granted points for every use case that you provide a submission for and a total score will be calculated based on the individual submissions. <br> <br>
 
 
