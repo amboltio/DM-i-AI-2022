@@ -7,10 +7,9 @@ In this GitHub repository, you will find all the necessary information needed fo
 Below you can find the four different use cases for the  DM i AI event. <br>
 Within each use case, you find a description together with a template that can be used to setup an API endpoint. <br> 
 The API endpoint will be used for submission and is required. <a href="https://github.com/amboltio/emily-cli">Emily</a> can help with setting up the API, but you should feel free to set them up on your own. The requirements for the API endpoints are specified in the respective use cases. <br> <br>
-<a href="https://github.com/amboltio/DM-i-AI/tree/main/wheres-waldo">- Where's Waldo</a> <br>
-<a href="https://github.com/amboltio/DM-i-AI/tree/main/movie-reviews">- Movie Rating Prediction</a> <br>
-<a href="https://github.com/amboltio/DM-i-AI/tree/main/racing-game">- Racing Track Simulation</a> <br>
-<a href="https://github.com/amboltio/DM-i-AI/tree/main/iq-test">- IQ Test Solver</a> <br> <br>
+<a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/sentiment-analysis">- Sentiment Analysis</a> <br>
+<a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/piglet-detection">- Piglet Detection</a> <br>
+<a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/robot-robbers">- Robot Robbers</a> <br> <br>
 
 Clone this GitHub repository to download Emily templates for all four use cases.
 ```
