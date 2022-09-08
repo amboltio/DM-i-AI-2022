@@ -1,10 +1,10 @@
 # DM i AI 2022
-Welcome to the event <a href="https://dmiai.dk/">DM i AI</a> hosted by <a href="https://ambolt.io/">Ambolt ApS</a>.
-In this GitHub repository, you will find all the necessary information needed for the event. Please read the entire information before proceeding to the use case, and please make sure to read the full description of all the use cases. You will be granted points for each use case based on how well you score in the respective use case.
+<h3>Welcome to the annually <a href="https://dmiai.dk/">DM i AI</a> event hosted by <a href="https://ambolt.io/">Ambolt ApS.</a></h3> <br>
+In this repository, you will find all the information needed to participate in the event. Please read the entire information before proceeding to the use cases, and please make sure to read the full description of every use case. You will be granted points for every use case that you provide a submission for and a total score will be calculated based on the individual submissions. <br> <br>
 
 
 <h2>Use cases</h2>
-Below you can find the four different use cases for the  DM i AI event. <br>
+Below you can find the three use cases for the DM i AI 2022 event. <br>
 Within each use case, you find a description together with a template that can be used to setup an API endpoint. <br> 
 The API endpoint will be used for submission and is required. <a href="https://github.com/amboltio/emily-cli">Emily</a> can help with setting up the API, but you should feel free to set them up on your own. The requirements for the API endpoints are specified in the respective use cases. <br> <br>
 <a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/sentiment-analysis">- Sentiment Analysis</a> <br>
