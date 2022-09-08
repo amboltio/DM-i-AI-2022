@@ -13,7 +13,7 @@ The API endpoint will be used for submission and is required. <a href="https://g
 
 Clone this GitHub repository to download Emily templates for all four use cases.
 ```
-git clone https://github.com/amboltio/DM-i-AI.git
+git clone https://github.com/amboltio/DM-i-AI-2022.git
 ```
 Inside the DM-i-AI folder, you will find the four different use cases. To open a use case with Emily type `emily open <use-case>` e.g. `emily open wheres-waldo` to open the first use case.
 
