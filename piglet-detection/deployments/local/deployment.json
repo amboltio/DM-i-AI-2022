@@ -1,0 +1,7 @@
+{
+    "type": "local",
+    "environment": "dev",
+    "configuration": "dev",
+    "excludes": [],
+    "mounts": []
+}

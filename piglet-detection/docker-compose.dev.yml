@@ -1,0 +1,7 @@
+
+version: "3"
+services:
+  emily-piglet-detection-dwaltd:
+    volumes:
+      - ../../:/workspace:cached
+
