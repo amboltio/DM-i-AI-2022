@@ -1,13 +1,28 @@
-from typing import List, IO
-from pydantic import BaseModel
-from fastapi import UploadFile
+from pydantic import BaseModel, ValidationError, validator
+from typing import List
 
+class PigPredictRequestDto(BaseModel):
+    img: str
 
-class PigletPredictRequestDto(UploadFile):
-    def __init__(self, filename: str, file: IO = None, content_type: str = "") -> None:
-        super().__init__(filename, file=file, content_type=content_type)
+class BoundingBoxClassification(BaseModel):
+    class_id: int
+    min_x: float
+    min_y: float
+    max_x: float
+    max_y: float
+    confidence: float
 
+    @validator('class_id')
+    def class_id_should_be_between_0_and_1(cls, v):
+        if v not in [0, 1]:
+            raise ValueError('not a valid class id. Must be 0 or 1')
+        return v
 
-class PigletPredictResponseDto(BaseModel):
-    boxes: List[List[int]]
-    isPiglet: List[bool]
+    @validator('confidence')
+    def confidence_should_be_between_0_and_1(conf, v):
+        if v < 0 or v > 1:
+            raise ValueError('not a valid confidence. Must be between 0 and 1')
+        return v
+
+class PigPredictResponseDto(BaseModel):
+    boxes: List[BoundingBoxClassification]
