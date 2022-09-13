@@ -5,13 +5,14 @@ In this use case, you will be reciving 1000 unique reviews of various eletronic 
   <img src="../images/amazon_review.jpg" width=650>
 </p>
 
-The stars given are in the interval 1, 2, ..., 5. You'll receive a list of reveiws, containing a review each. You should return the ratings as a list of floats corresponding to a rating for each review.
+The stars given are in the interval 1, 2, ..., 5. You'll receive 1000 reviews as a list of reveiws. You should return the ratings as a list of floats corresponding to a rating for each review.
 
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
 
 Your model will be evaluated on how close to the actual ratings your predictions are. To be exact, your score is measured as the distance between your prediction and the actual rating. An average error for all reviews is calculated and used as your score. i.e. the evaluation metric is mean absolute error.
 The score will be normalized in the interval 0.0 to 1.0 and flipped such that a low error grants the most points.
+The validation request timeouts after 30 seconds, so you need to make sure that your solution can handle 1000 reviews in under 30 seconds.
 
 Notice that you can only submit once! We encourage you to validate your code and API before you submit your final model. You can find the documentation of your API where you can try out your model and verify the prediction. <br>
 The documentation is by default found at `0.0.0.0:4242/docs`, and then find the prediction endpoint for the use case.
