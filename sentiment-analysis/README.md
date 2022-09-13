@@ -29,12 +29,12 @@ You will be prompted for selecting an application. For this use case, it might b
 
 To take full advantage of Emily and the template, your code for prediction should go in api.py:
 ```python
-@app.post('/api/predict', response_model=PredictResponse)
-def predict(request: PredictRequest) -> PredictResponse:
+@app.post('/api/predict', response_model=SentimentAnalysisResponseDto)
+def predict(request: SentimentAnalysisRequestDto) -> SentimentAnalysisResponseDto:
 
     ratings = [random.randint(1, 5) for review in request.reviews]
 
-    return PredictResponse(ratings=ratings)
+    return SentimentAnalysisResponseDto(scores=ratings)
 ```
 For further details about the recommended structure, see <a href="https://amboltio.github.io/emily-intro/emily-intro/">this guide</a>.
 You can add new packages to the Python environment by adding the names of the packages to requirements.txt and restarting the project, or by using pip install on a terminal within the container which will result in the package being installed temporarily i.e. it is not installed if the project is restarted. <br>
