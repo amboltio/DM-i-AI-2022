@@ -105,9 +105,9 @@ Each row of the observation matrix contains 10 4-d vectors, but not all vectors 
 Inactive game elements (e.g., the last 5 vectors in $M_{0}$) are represented by their position being placed outside the game grid `(-1, -1)`. 
 > For example, the vector of an inactive cashbag (cashbags are inactive while being carried by a robot) will always be `(-1, -1, 1, 1)`.
 
-**Reward** is when you gain points, this will be appearent in the reward.
-**total_reward** is the total score for your current game.
-**game_ticks** is the number of game tick currently running.
+* **Reward** is when you gain points, this will be appearent in the reward.
+* **total_reward** is the total score for your current game. 
+* **game_ticks** is the number of game tick currently running.
 
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
