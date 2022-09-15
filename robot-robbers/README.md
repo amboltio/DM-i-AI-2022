@@ -109,6 +109,18 @@ Inactive game elements (e.g., the last 5 vectors in $M_{0}$) are represented by 
 * **total_reward** is the total score for your current game. 
 * **game_ticks** is the number of game tick currently running.
 
+From these information you should be able to predict your next move and return:
+```python
+class RobotRobbersPredictResponseDto(BaseModel):
+    moves: List[int]
+```
+Which essensially is a list of moves, for example:
+moves = [ $Δ_{x,1}$, $Δ_{y,1}$, $Δ_{x,2}$, $Δ_{y,2}$ ... , $Δ_{x,5}$, $Δ_{y,5}$ ]
+where, $Δ_{x,n}$ and $Δ_{y,n}$ are the change in x and y direction for robot n.
+
+
+
+
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
 
