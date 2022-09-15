@@ -22,8 +22,8 @@ All of these are randomly placed at every game start.
 You will recive the states at your prediction endpoint for every game tick.
 
 ### Controlling robots
-<p align="center">
-  <img src="../images/robot.png" width=300>
+<p align="left">
+  <img src="../images/robot.png" width=250>
 </p>
 
 ## Evaluation
