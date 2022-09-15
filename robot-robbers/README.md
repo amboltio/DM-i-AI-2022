@@ -115,9 +115,9 @@ From these information you should be able to predict your next move and return:
 class RobotRobbersPredictResponseDto(BaseModel):
     moves: List[int]
 ```
-which is a 10-d vector of moves:
-moves = [ $Δ_{x,0}$, $Δ_{y,0}$, $Δ_{x,1}$, $Δ_{y,2}$, ... $Δ_{x,4}$, $Δ_{y,4}$ ]
-where, $Δ_{x,n}$ and $Δ_{y,n}$ are the change in x and y direction for robot n.
+which is a 10-d vector of moves: <br>
+moves = [ $Δ_{x,0}$, $Δ_{y,0}$, $Δ_{x,1}$, $Δ_{y,2}$, ... $Δ_{x,4}$, $Δ_{y,4}$ ] <br>
+where, $Δ_{x,n}$ and $Δ_{y,n}$ are the change in x and y direction for robot n. 
 
 
 ## Evaluation
