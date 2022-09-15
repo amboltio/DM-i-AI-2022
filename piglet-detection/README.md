@@ -4,13 +4,13 @@ In this use case, your task is to detect pigs and piglets and separate them from
 You will be receiving XX images of animals, where you need to predict the bounding box locations of the pigs and piglets. The predictions should contain the top left and bottom right normalized coordinates of the predicted bounding box, as well as an object class and a confidence score. Pigs have object class 0 and piglets have object class 1. The confidence score is a value in the range [0-1] referring to the certainty of the detection. See the image below for an illustation of the concept.
 
 <p align="center">
-  <img src="../images/example2.jpg" width=450>
+  <img src="../images/example2.jpg" width=500>
 </p>
 
 All the images have a fixed size of 640x640 px. A single image can contain up to 15 objects. **You have 10 seconds to return your predictions for each image.**
 You will only be receiving images of what we deem a *visually clear piglet*. Thus, if it has been difficult to assess wheter an image contains a pig or a piglet, the image is removed. Such an example is given below.
 <p align="center">
-  <img src="../images/removed_sample2.jpg" width=350>
+  <img src="../images/removed_sample2.jpg" width=375>
 </p>
 
 ## Evaluation
