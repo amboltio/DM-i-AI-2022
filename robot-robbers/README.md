@@ -114,41 +114,37 @@ From these information you should be able to predict your next move and return:
 class RobotRobbersPredictResponseDto(BaseModel):
     moves: List[int]
 ```
-Which essensially is a list of moves, for example:
+Which essensially is a list of moves, for example: <br>
 moves = [ $Δ_{x,1}$, $Δ_{y,1}$, $Δ_{x,2}$, $Δ_{y,2}$ ... , $Δ_{x,5}$, $Δ_{y,5}$ ] <br>
 where, $Δ_{x,n}$ and $Δ_{y,n}$ are the change in x and y direction for robot n.
 
 
-
-
 ## Evaluation
-During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
+During the week of the competition, you will be able to validate your solution against a validation seed. The best score your model achieves on the validation seed will be displayed on the scoreboard. You'll have exactly 2 minutes to play the game for each attempt.
 
-Your model will be evaluated on how close to the actual ratings your predictions are. To be exact, your score is measured as the distance between your prediction and the actual rating. An average error for all reviews is calculated and used as your score. i.e. the evaluation metric is mean absolute error.
-The score will be normalized in the interval 0.0 to 1.0 and flipped such that a low error grants the most points.
-The validation request timeouts after 30 seconds, so you need to make sure that your solution can handle 1000 reviews in under 30 seconds.
+When you think your solution can't get any better, you should evaluate your solution.
 
-Notice that you can only submit once! We encourage you to validate your code and API before you submit your final model. You can find the documentation of your API where you can try out your model and verify the prediction. <br>
-The documentation is by default found at `0.0.0.0:4242/docs`, and then find the prediction endpoint for the use case.
-
-
-After evaluation, your final score will be provided. This score can be seen on the <a href="https://cases.dmiai.dk/">scoreboard</a> shortly after.
+After evaluation, your final score will be provided. This score can be seen on the <a href="https://cases.dmiai.dk/">scoreboard</a> shortly after and cannot be changed.
 
 ## Getting started using Emily
 Once the repository is cloned, navigate to the folder using a terminal and type:
 ```
-emily open sentiment-analysis
+emily open robot-robbers
 ```
-You will be prompted for selecting an application. For this use case, it might be beneficial to use a Natural Language Processing image, where you can select your prefered deep learning framework. Afterwards, you will be asked to mount a data folder for your project. This folder should include your data, for the first run it can empty and you can add data later. Then select an editor of your choice to open the Emily template for the use case. A Docker container with a Python environment will be opened. Some content needs to be downloaded the first time a project is opened, this might take a bit of time.
+A Docker container with a Python environment will be opened. Some content needs to be downloaded the first time a project is opened, this might take a bit of time.
 
 To take full advantage of Emily and the template, your code for prediction should go in api.py:
 ```python
-@app.post('/api/predict', response_model=SentimentAnalysisResponseDto)
-def predict(request: SentimentAnalysisRequestDto) -> SentimentAnalysisResponseDto:
+@app.post('/api/predict', response_model=RobotRobbersPredictResponseDto)
+def predict(request: RobotRobbersPredictRequestDto) -> RobotRobbersPredictResponseDto:
 
-    ratings = [random.randint(1, 5) for review in request.reviews]
+    moves = [0, 0,
+             0, 0,
+             0, 0,
+             0, 0,
+             0, 0]
 
-    return SentimentAnalysisResponseDto(scores=ratings)
+    return RobotRobbersPredictResponseDto(moves=moves)
 ```
 You can add new packages to the Python environment by adding the names of the packages to requirements.txt and restarting the project, or by using pip install on a terminal within the container which will result in the package being installed temporarily i.e. it is not installed if the project is restarted. <a href="https://emily.ambolt.io/docs/latest">Click here</a> to visit the Emily documentation.
 
