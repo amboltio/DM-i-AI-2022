@@ -2,7 +2,7 @@
 In this use case, you will be receiving 1000 unique reviews of various eletronic equipments found on <a href="https://www.amazon.com/">Amazon</a>. Your task is to predict the number of stars for the given review. See the image below for an illustration of the concept.
 
 <p align="center">
-  <img src="../images/amazon_review.jpg" width=650>
+  <img src="../images/amazon_review.jpg" width=800>
 </p>
 
 The stars given are in the interval 1, 2, ..., 5. You'll receive 1000 reviews as a list of reveiws. You should return the ratings as a list of floats corresponding to a rating for each review.
