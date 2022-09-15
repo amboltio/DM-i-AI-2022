@@ -38,10 +38,10 @@ action = [
 ```
 
 ### Cashbags & Dropspots
-<p align="center">
-  <img src="../images/cashbag.png" width=150>
+<p align="left">
+  <img src="../images/cashbag.png" width=50>
   and
-  <img src="../images/dropspot.png" width=150>
+  <img src="../images/dropspot.png" width=50>
 </p>
 
 ## Evaluation
