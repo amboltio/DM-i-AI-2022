@@ -29,7 +29,7 @@ You have to control all 5 robots for every game tick. Every robot kan only move 
 
 For example:
 ```python
-action = [
+moves = [
   1, 1,    # Move robot 0 one cell to the right, one cell down
   -1, -1,  # Move robot 1 one cell to the left, one cell up
   0, 0     # Make robot 2 stand still
@@ -115,13 +115,8 @@ From these information you should be able to predict your next move and return:
 class RobotRobbersPredictResponseDto(BaseModel):
     moves: List[int]
 ```
-Which is a list of moves identical to the action introduced previously, for example: <br>
-moves = [<br>
-&nbsp;&nbsp;  $Δ_{x,0}$, $Δ_{y,0}$,  &nbsp;&nbsp;  Move action for robot 0 <br>
-&nbsp;&nbsp;  $Δ_{x,1}$, $Δ_{y,2}$,  &nbsp;&nbsp;  Move action for robot 1 <br>
-&nbsp;&nbsp;  ... <br>
-&nbsp;&nbsp;  $Δ_{x,4}$, $Δ_{y,4}$   &nbsp;&nbsp;  Move action for robot 4 <br>
-  ]
+Which is a 10-d vector of moves, for example: <br>
+moves = [ $Δ_{x,0}$, $Δ_{y,0}$, $Δ_{x,1}$, $Δ_{y,2}$, ... $Δ_{x,4}$, $Δ_{y,4}$ ]
 
 $Δ_{x,n}$ and $Δ_{y,n}$ are the change in x and y direction for robot n.
 
