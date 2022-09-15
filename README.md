@@ -11,7 +11,7 @@ The API endpoint will be used for submission and is required. <a href="https://a
 <a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/piglet-detection">- Piglet Detection</a> <br>
 <a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/robot-robbers">- Robot Robbers</a> <br> <br>
 
-Clone this GitHub repository to download Emily templates for all four use cases.
+Clone this GitHub repository to download Emily templates for all three use cases.
 ```
 git clone https://github.com/amboltio/DM-i-AI-2022.git
 ```
@@ -51,7 +51,7 @@ Upon completion of the contest, the top 5 highest-ranking teams will be asked to
 
 <h2>How to get a server for deployment?</h2>
 When you are doing the submission we are expecting you to host the server at which the REST API can be deployed. You can sign up to <a href="https://azure.microsoft.com/da-dk/free/students/">Azure for Students</a>, where you will get free credits that you can use to create a virtual machine. We expect you all to be able to do this, since the competition is only for students. Alternatively, you can also deploy your submission locally (This requires a public IP). <br> 
-The following contain the necessary links for creating a virtual machine: <br> <br>
+The following contains the necessary links for creating a virtual machine: <br> <br>
 
 * <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal">Creating a linux virtual machine</a> <br>
 * <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/use-remote-desktop">Install and configure xrdp to use Remote Desktop</a> <br>
