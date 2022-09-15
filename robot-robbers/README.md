@@ -25,6 +25,16 @@ You will recive the states at your prediction endpoint for every game tick.
 <p align="left">
   <img src="../images/robot.png" width=250>
 </p>
+You'll have to control in total 5 robots for every game tick. Every robot kan only move 1 step at a time in either horizontal, vertical or diagonal direction. Movement instructions has to be provided as delta `x`and `y`.
+
+For example:
+```python
+action = [
+  1, 1,    # Move robot 0 one cell to the right, one cell down
+  -1, -1,  # Move robot 1 one cell to the right, one cell down
+  0, 0     # Make robot 2 stand still
+]
+```
 
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
