@@ -118,7 +118,7 @@ class RobotRobbersPredictResponseDto(BaseModel):
 Which essensially is a list of moves identical to the action introduced previously, for example: <br>
 ```python
 moves = [
-  Δ_{x,0}, $Δ_{y,0}$,  # Move action for robot 0 
+  Δ~{x,0}~, $Δ_{y,0}$,  # Move action for robot 0 
   $Δ_{y,1}$, $Δ_{y,2}$,  # Move action for robot 1
   ...
   $Δ_{x,4}$, $Δ_{y,4}$   # Move action for robot 4
