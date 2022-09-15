@@ -48,9 +48,8 @@ The reward of depositing cashbags increases exponentially by the number of cashb
 
 1. Carrying 1 cashbag -> reward of 1
 2. Carrying 2 cashbags -> reward of 4
-3. Carrying 3 cashbags -> reward of 9
-However, robots become burdened by carrying cashbags, and move slower the more they carry:
-
+3. Carrying 3 cashbags -> reward of 9 <br>
+However, robots become burdened by carrying cashbags and they move slower the more they carry:
 1. Robot speed (0 cashbags): 1 ticks / move
 2. Robot speed (1 cashbag): 2 ticks / move
 3. Robot speed (2 cashbags): 3 ticks / move
