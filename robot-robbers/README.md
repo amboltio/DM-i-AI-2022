@@ -3,7 +3,7 @@ In this use case, you should develop a system for playing robot robbers.
 The Robot Robbers game is an interactive 2D game where you, the player, control 5 robots trying to steal money from angry scrooges.
 
 <p align="center">
-  <img src="../images/robot_robbers.jpg" width=650>
+  <img src="../images/robot_robbers.png" width=650>
 </p>
 
 The stars given are in the interval 1, 2, ..., 5. You'll receive 1000 reviews as a list of reveiws. You should return the ratings as a list of floats corresponding to a rating for each review.
