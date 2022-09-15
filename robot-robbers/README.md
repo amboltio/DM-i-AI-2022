@@ -46,7 +46,7 @@ When a robot robber intersects with a cashbag, the robot picks it up. When a rob
 
 The reward of depositing cashbags increases exponentially by the number of cashbags carried, e.g.:
 
-1.Carrying 1 cashbag -> reward of 1
+1. Carrying 1 cashbag -> reward of 1
 2. Carrying 2 cashbags -> reward of 4
 3. Carrying 3 cashbags -> reward of 9
 
