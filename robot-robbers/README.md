@@ -115,7 +115,7 @@ class RobotRobbersPredictResponseDto(BaseModel):
     moves: List[int]
 ```
 Which essensially is a list of moves, for example:
-moves = [ $Δ_{x,1}$, $Δ_{y,1}$, $Δ_{x,2}$, $Δ_{y,2}$ ... , $Δ_{x,5}$, $Δ_{y,5}$ ]
+moves = [ $Δ_{x,1}$, $Δ_{y,1}$, $Δ_{x,2}$, $Δ_{y,2}$ ... , $Δ_{x,5}$, $Δ_{y,5}$ ] <br>
 where, $Δ_{x,n}$ and $Δ_{y,n}$ are the change in x and y direction for robot n.
 
 
