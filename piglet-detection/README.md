@@ -1,24 +1,25 @@
 # Sentiment Analysis of Amazon Reviews
-In this use case, you will be reciving 1000 unique reviews of various eletronic equipments found on <a href="https://www.amazon.com/">Amazon</a>. Your task is to predict the number of stars for the given review. See the image below for an illustration of the concept.
+In this use case, you will be receiving XX images of animals. Your task is to detect pigs and piglets and predict their bounding box location. See the image below for an illustation of the concept. All the images are resized to a have a fixed size of (W x H). You are free to decrease the image size in your model.
 
 <p align="center">
-  <img src="../images/amazon_review.jpg" width=650>
+  <img src="../pigImage.jpg" width=650>
 </p>
 
-The stars given are in the interval 1, 2, ..., 5. You'll receive 1000 reviews as a list of reveiws. You should return the ratings as a list of floats corresponding to a rating for each review.
+The images can contain either no pigs or piglets, only pigs or piglets or lastly both pigs and piglets. The number of objects in the images ranges from 0-XX.
+You will only be receiving images of what we deem a *visually clear* piglet. Thus, if it has been difficult to assess wheter an object is a pig or a piglet, the image is removed. 
 
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
 
-Your model will be evaluated on how close to the actual ratings your predictions are. To be exact, your score is measured as the distance between your prediction and the actual rating. An average error for all reviews is calculated and used as your score. i.e. the evaluation metric is mean absolute error.
-The score will be normalized in the interval 0.0 to 1.0 and flipped such that a low error grants the most points.
-The validation request timeouts after 30 seconds, so you need to make sure that your solution can handle 1000 reviews in under 30 seconds.
+Your model will be evaluated using the mean Average Precission at a 0.5 IoU threshold (mAP@0.5). The score ranges from [0-1], with 1 being the highest score.
+The validation request timeouts after XX seconds, so you need to make sure that your solution can handle XX images in under XX seconds.
 
 Notice that you can only submit once! We encourage you to validate your code and API before you submit your final model. You can find the documentation of your API where you can try out your model and verify the prediction. <br>
 The documentation is by default found at `0.0.0.0:4242/docs`, and then find the prediction endpoint for the use case.
 
 
 After evaluation, your final score will be provided. This score can be seen on the <a href="https://cases.dmiai.dk/">scoreboard</a> shortly after.
+
 
 ## Getting started using Emily
 Once the repository is cloned, navigate to the folder using a terminal and type:
