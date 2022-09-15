@@ -7,7 +7,7 @@ You will be receiving XX images of animals, where you need to predict the boundi
   <img src="../pigImage.jpg" width=650>
 </p>
 
-All the images have a fixed size of WxH px. The number of objects in the images ranges from 0-XX. ** You have XX seconds to make your predictions for each image. **
+All the images have a fixed size of WxH px. The number of objects in the images ranges from 0-XX. **You have XX seconds to make your predictions for each image.**
 You will only be receiving images of what we deem a *visually clear* piglet. Thus, if it has been difficult to assess wheter an image contains a pig or a piglet, the image is removed.
 
 ## Evaluation
