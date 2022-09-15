@@ -11,7 +11,7 @@ The API endpoint will be used for submission and is required. <a href="https://a
 <a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/piglet-detection">- Piglet Detection</a> <br>
 <a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/robot-robbers">- Robot Robbers</a> <br> <br>
 
-Clone this GitHub repository to download Emily templates for all four use cases.
+Clone this GitHub repository to download Emily templates for all three use cases.
 ```
 git clone https://github.com/amboltio/DM-i-AI-2022.git
 ```
