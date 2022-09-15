@@ -1,13 +1,14 @@
 # Pig and Piglet Detection
 In this use case, your task is to detect pigs and piglets and separate them from each other. 
+
 You will be receiving XX images of animals, where you need to predict the bounding box locations of the pigs and piglets. The predictions should contain the top left and bottom right normalized coordinates of the predicted bounding box, as well as an object class and a confidence score. Pigs have object class 0 and piglets have object class 1. *The confidence score is a value in the range [0-1] referring to the certainty of the detection.* See the image below for an illustation of the concept.
 
 <p align="center">
   <img src="../pigImage.jpg" width=650>
 </p>
 
-All the images have a fixed size of (W x H). The images can contain either no pigs or piglets, only pigs or piglets or lastly both pigs and piglets. The number of objects in the images ranges from 0-XX. ** You have XX seconds to make your predictions for each image. **
-You will only be receiving images of what we deem a *visually clear* piglet. Thus, if it has been difficult to assess wheter an image contains a pig or a piglet, the image is removed. 
+All the images have a fixed size of WxH px. The number of objects in the images ranges from 0-XX. ** You have XX seconds to make your predictions for each image. **
+You will only be receiving images of what we deem a *visually clear* piglet. Thus, if it has been difficult to assess wheter an image contains a pig or a piglet, the image is removed.
 
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
