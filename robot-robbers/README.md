@@ -1,12 +1,7 @@
 # Robot Robbers
 In this use case, you should develop a system for playing robot robbers.
 The Robot Robbers game is an interactive 2D game where you, the player, control 5 robots trying to steal money from angry scrooges.
-
-
-
-
-
-
+<br><br><br><br>
 <p align="center">
   <img src="../images/robot_robbers.png" width=650>
 </p>
