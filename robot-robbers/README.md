@@ -122,7 +122,7 @@ where, $Δ_{x,n}$ and $Δ_{y,n}$ are the change in x and y direction for robot n
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation seed. The best score your model achieves on the validation seed will be displayed on the scoreboard. You'll have exactly 2 minutes to play the game for each attempt.
 
-Once you have developed your solution, you should evaluate it. You only have one evaluation attempt!
+Once you have developed your solution, you should evaluate it. Remember, that you only have one evaluation attempt!
 
 After evaluation, your final score will be provided. This score can be seen on the <a href="https://cases.dmiai.dk/">scoreboard</a> shortly after and cannot be changed.
 
