@@ -30,11 +30,19 @@ You'll have to control in total 5 robots for every game tick. Every robot kan on
 For example:
 ```python
 action = [
-  1, 1,    # Move robot 0 one cell to the right, one cell down
-  -1, -1,  # Move robot 1 one cell to the right, one cell down
+  1, 1,    
+  # Move robot 0 one cell to the right, one cell down
+  -1, -1,  # Move robot 1 one cell to the left, one cell up
   0, 0     # Make robot 2 stand still
 ]
 ```
+
+### Cashbags & Dropspots
+<p align="center">
+  <img src="../images/cashbag.png" width=150>
+  and
+  <img src="../images/dropspot.png" width=150>
+</p>
 
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
