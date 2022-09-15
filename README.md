@@ -44,11 +44,11 @@ The total score is simply an average of your individual scores.<br>
 This format also means that you can loose points / be overtaken by other teams during the week if they submit a model that is better than yours. 
 
 <h3>Deadline for submission</h3>
-The deadline for submission is Monday the 10th of October at 14:00
+The deadline for submission is Monday the 10th of October at 14:00.
 
 <h3>Final evaluation</h3>
 
-Upon completion of the contest, the top 3 highest-ranking teams will be asked to submit their training code and the trained models for validation ATLEAST 24 hour after the deadline (Tuesday the 11th of October at 14:00). The final ranking is announced on 14/10.
+Upon completion of the contest, the top 3 highest-ranking teams will be asked to submit their training code and the trained models for validation ATLEAST 24 hour after the deadline (Tuesday the 11th of October at 14:00). The final ranking is announced Friday the 14th of October.
 
 <h2>How to get a server for deployment?</h2>
 When you are doing the submission we are expecting you to host the server at which the REST API can be deployed. You can sign up to <a href="https://azure.microsoft.com/da-dk/free/students/">Azure for Students</a>, where you will get free credits that you can use to create a virtual machine. We expect you all to be able to do this, since the competition is only for students. Alternatively, you can also deploy your submission locally (This requires a public IP). <br> 
