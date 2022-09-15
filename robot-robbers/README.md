@@ -55,7 +55,8 @@ However, robots become burdened by carrying cashbags and they move slower the mo
 2. Robot speed (1 cashbag): 2 ticks / move
 3. Robot speed (2 cashbags): 3 ticks / move
 
-The number of cashbags on the screen always remains the same; when cashbags are deposited or taken away by scrooges, they will spawn again at random places on the map.
+The number of cashbags on the screen always remains the same. Cashbacks respawn when they are deposited or when they are taken away by scrooges.
+
 
 ### Scrooges
 <p align="left">
