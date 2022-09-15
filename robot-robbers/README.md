@@ -15,12 +15,16 @@ Every game runs in a 128x128 grid environment. Every game is initialized with:
 
 1. 5 robots (controlled by the player)
 2. 7 scrooges (controlled by the game)
-Between 2-5 obstacles, the height and width of which range between 1 and 20.
-3. 5 cashbags
-4. 3 dropspots
+3. Between 2-5 obstacles, the height and width of which range between 1 and 20.
+4. 5 cashbags
+5. 3 dropspots
 All of these are randomly placed at every game start.
 You will recive the states at your prediction endpoint for every game tick.
 
+### Controlling robots
+<p align="center">
+  <img src="../images/robot.png" width=300>
+</p>
 
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
