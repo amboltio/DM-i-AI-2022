@@ -6,7 +6,7 @@ The Robot Robbers game is an interactive 2D game where you, the player, control 
   <img src="../images/robot_robbers.png" width=650>
 </p>
 
-<it>A description of the invididual icons will follow.</it>
+<i>A description of the invididual icons will follow.</i>
 
 The objective of this use case is to reach the highest possible reward in 2 wall-clock minutes. Balance the trade off between time and performance well!
 
