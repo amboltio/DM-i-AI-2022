@@ -24,9 +24,9 @@ After evaluation, your final score will be provided. This score can be seen on t
 ## Getting started using Emily
 Once the repository is cloned, navigate to the folder using a terminal and type:
 ```
-emily open sentiment-analysis
+emily open piglet-detection
 ```
-You will be prompted for selecting an application. For this use case, it might be beneficial to use a Natural Language Processing image, where you can select your prefered deep learning framework. Afterwards, you will be asked to mount a data folder for your project. This folder should include your data, for the first run it can empty and you can add data later. Then select an editor of your choice to open the Emily template for the use case. A Docker container with a Python environment will be opened. Some content needs to be downloaded the first time a project is opened, this might take a bit of time.
+You will be prompted for selecting an application. For this use case, it might be beneficial to use a Computer Vision image, where you can select your prefered deep learning framework. Afterwards, you will be asked to mount a data folder for your project. This folder should include your data, for the first run it can empty and you can add data later. Then select an editor of your choice to open the Emily template for the use case. A Docker container with a Python environment will be opened. Some content needs to be downloaded the first time a project is opened, this might take a bit of time.
 
 To take full advantage of Emily and the template, your code for prediction should go in api.py:
 ```python
