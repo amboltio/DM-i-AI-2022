@@ -69,10 +69,11 @@ Initially, scrooges will move around randomly on the map.
 
 If a robot carrying cashbags intersects with a scrooge, the cashbags are taken away and the player receives a -10 reward penalty.
 
-If a robot is within 15 units of distance from a robot, the scrooge will chase the robot until:
+If a robot is within a distance of 15 units of a scrooge, the scrooge will chase the robot until:
 
-The scrooge reaches the robot, at which point the robot will not be chased again by any scrooge for 100 game ticks
-The robot comes out of range, at which point the scrooge will wander randomly again
+* The scrooge reaches the robot, at which point the robot will not be chased again by any scrooge for 100 game ticks.
+* The robot comes out of range, at which point the scrooge will wander randomly again.
+
 Scrooges always move at the speed of 2 ticks / move.
 
 ## Rules
