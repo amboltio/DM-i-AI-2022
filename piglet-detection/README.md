@@ -7,7 +7,7 @@ You will be receiving XX images of animals, where you need to predict the boundi
   <img src="../pigImage.jpg" width=650>
 </p>
 
-All the images have a fixed size of WxH px. A single image can contain up to 15 objects. **You have 10 seconds to return your predictions for each image.**
+All the images have a fixed size of 640x640 px. A single image can contain up to 15 objects. **You have 10 seconds to return your predictions for each image.**
 You will only be receiving images of what we deem a *visually clear piglet*. Thus, if it has been difficult to assess wheter an image contains a pig or a piglet, the image is removed. Such an example is given below.
 <p align="center">
   <img src="../images/removed_sample2.jpg" width=350>
