@@ -33,7 +33,6 @@ action = [
   1, 1,    # Move robot 0 one cell to the right, one cell down
   -1, -1,  # Move robot 1 one cell to the left, one cell up
   0, 0     # Make robot 2 stand still
-  ...
 ]
 ```
 
