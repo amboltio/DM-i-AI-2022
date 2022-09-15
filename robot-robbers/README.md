@@ -46,13 +46,14 @@ When a robot robber intersects with a cashbag, the robot picks it up. When a rob
 
 The reward of depositing cashbags increases exponentially by the number of cashbags carried, e.g.:
 
-* Carrying 1 cashbag -> reward of 1
-* Carrying 2 cashbags -> reward of 4
-* Carrying 3 cashbags -> reward of 9 <br>
+1.Carrying 1 cashbag -> reward of 1
+2. Carrying 2 cashbags -> reward of 4
+3. Carrying 3 cashbags -> reward of 9
+
 However, robots become burdened by carrying cashbags and they move slower the more they carry:
-* Robot speed (0 cashbags): 1 ticks / move
-* Robot speed (1 cashbag): 2 ticks / move
-* Robot speed (2 cashbags): 3 ticks / move
+1. Robot speed (0 cashbags): 1 ticks / move
+2. Robot speed (1 cashbag): 2 ticks / move
+3. Robot speed (2 cashbags): 3 ticks / move
 
 The number of cashbags on the screen always remains the same; when cashbags are deposited or taken away by scrooges, they will spawn again at random places on the map.
 
