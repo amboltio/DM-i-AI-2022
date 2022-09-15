@@ -1,11 +1,12 @@
-# Sentiment Analysis of Amazon Reviews
-In this use case, you will be receiving XX images of animals. Your task is to detect pigs and piglets and predict their bounding box location. See the image below for an illustation of the concept. All the images are resized to a have a fixed size of (W x H). You are free to decrease the image size in your model.
+# Pig and Piglet Detection
+In this use case, your task is to detect pigs and piglets and separate them from each other. 
+You will be receiving XX images of animals, where you need predict bounding box locations of the pigs and piglets. The predictions should contain the top left and bottom right normalized coordinates of the predicted bounding box, as well as an object class and a confidence score. Pigs have object class 0 and piglets have object class 1. *The confidence score is a value in the range [0-1] referring to the certainty of the detection.* See the image below for an illustation of the concept.
 
 <p align="center">
   <img src="../pigImage.jpg" width=650>
 </p>
 
-The images can contain either no pigs or piglets, only pigs or piglets or lastly both pigs and piglets. The number of objects in the images ranges from 0-XX.
+All the images have a fixed size of (W x H). The images can contain either no pigs or piglets, only pigs or piglets or lastly both pigs and piglets. The number of objects in the images ranges from 0-XX. ** You have 5 seconds to 
 You will only be receiving images of what we deem a *visually clear* piglet. Thus, if it has been difficult to assess wheter an object is a pig or a piglet, the image is removed. 
 
 ## Evaluation
@@ -30,12 +31,14 @@ You will be prompted for selecting an application. For this use case, it might b
 
 To take full advantage of Emily and the template, your code for prediction should go in api.py:
 ```python
-@app.post('/api/predict', response_model=SentimentAnalysisResponseDto)
-def predict(request: SentimentAnalysisRequestDto) -> SentimentAnalysisResponseDto:
+@app.post('/api/predict', response_model=PigPredictResponseDto)
+def predict(request: PigPredictRequestDto) -> PigPredictResponseDto:
+    ############ Modify this ##########
+    predictions = []
+    for img in request.img:
+        predictions.append(predict(decode(img)))
 
-    ratings = [random.randint(1, 5) for review in request.reviews]
-
-    return SentimentAnalysisResponseDto(scores=ratings)
+    return PigPredictResponseDto(boxes=predictions)
 ```
 For further details about the recommended structure, see <a href="https://amboltio.github.io/emily-intro/emily-intro/">this guide</a>.
 You can add new packages to the Python environment by adding the names of the packages to requirements.txt and restarting the project, or by using pip install on a terminal within the container which will result in the package being installed temporarily i.e. it is not installed if the project is restarted. <br>
