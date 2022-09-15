@@ -37,7 +37,8 @@ def predict(request: PigPredictRequestDto) -> PigPredictResponseDto:
     ############ Modify this ##########
     predictions = []
     for img in request.img:
-        predictions.append(predict(decode(img)))
+        decoded_img = decode(img)
+        predictions.append(predict(decoded_img))
 
     return PigPredictResponseDto(boxes=predictions)
 ```
