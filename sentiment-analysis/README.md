@@ -10,7 +10,7 @@ The stars given are in the interval [1-5]. You'll receive 1000 reviews as a list
 ## Evaluation
 During the week of competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
 
-Your model will be evaluated on how close to the actual ratings your predictions are. To be exact, your score is measured as the distance between your prediction and the actual rating. An average error for all reviews is calculated and used as your score. i.e. the evaluation metric is mean absolute error.
+Your model will be evaluated on how close your predictions are to the actual ratings. To be exact, your score is measured as the distance between your prediction and the actual rating. An average error for all reviews is calculated and used as your score. i.e. the evaluation metric is mean absolute error.
 The score will be normalized in the interval 0.0 to 1.0 and flipped such that a low error grants the most points.
 The validation request timeouts after 30 seconds, so you need to make sure that your solution can handle 1000 reviews in under 30 seconds.
 
