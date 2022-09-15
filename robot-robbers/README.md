@@ -43,6 +43,71 @@ action = [
   and
   <img src="../images/dropspot.png" width=50>
 </p>
+When a robot robber intersects with a cashbag, the robot picks it up. When a robot carrying cashbags intersects with a dropspot, the cashbags are deposited and a reward is provided.
+
+The reward of depositing cashbags increases exponentially by the number of cashbags carried, e.g.:
+
+1. Carrying 1 cashbag -> reward of 1
+2. Carrying 2 cashbags -> reward of 4
+3. Carrying 3 cashbags -> reward of 9
+However, robots become burdened by carrying cashbags, and move slower the more they carry:
+
+1. Robot speed (0 cashbags): 1 ticks / move
+2. Robot speed (1 cashbag): 2 ticks / move
+3. Robot speed (2 cashbags): 3 ticks / move
+
+The number of cashbags on the screen always remains the same; when cashbags are deposited or taken away by scrooges, they will spawn again at random places on the map.
+
+### Scrooges
+<p align="left">
+  <img src="../images/scrooge.png" width=50>
+</p>
+
+The scrooges are the game antagonists. They will try their very best to keep the cashbags from being stolen.
+
+Initially, scrooges will move around randomly on the map.
+
+If a robot carrying cashbags intersects with a scrooge, the cashbags are taken away and the player receives a -10 reward penalty.
+
+If a robot is within 15 units of distance from a robot, the scrooge will chase the robot until:
+
+The scrooge reaches the robot, at which point the robot will not be chased again by any scrooge for 100 game ticks
+The robot comes out of range, at which point the scrooge will wander randomly again
+Scrooges always move at the speed of 2 ticks / move.
+
+## Rules
+* Robots and scrooges cannot move outside of the grid.
+* Robots and scrooges can only move one unit in either direction in a single game tick.
+* Robots and scrooges cannot move through obstacles.
+
+## Interaction
+You'll recive a `RobotRobbersPredictRequestDto` which contain the following:
+```python
+class RobotRobbersPredictRequestDto(BaseModel):
+    state: List[List[List[int]]]
+    reward: float
+    is_terminal: bool
+    total_reward: float
+    game_ticks: int
+```
+Where **state** is composed of the following:
+Given an observation matrix $M \in \mathbb{Z}^{6 \times 10 \times 4}$, the contents are as follows:
+
+1. $M_{0}$ is an array of 4-d vectors containing the $x, y, w, h$ of all **robot robbers** ($w, h$ is always $1$).
+2. $M_{1}$ is an array of 4-d vectors containing the $x, y, w, h$ of all **scrooges** ($w, h$ is always $1$).
+3. $M_{2}$ is an array of 4-d vectors containing the $x, y, w, h$ of all **cashbags** ($w, h$ is always $1$).
+4. $M_{3}$ is an array of 4-d vectors containing the $x, y, w, h$ of all **dropspots** ($w, h$ is always $1$).
+5. $M_{4}$ is an array of 4-d vectors containing the $x, y, w, h$ of all **obstacles**.
+6. $M_{5}$ is an array of 4-d vectors where the first element of the vector is the number of cashbags carried by the robot robber with the same index. The rest of the vector elements are always $0$.
+   - For example, given the robber $i$ at $M_{0,i}$, the number of cashbags carried by this robber is $M_{5, i, 0}$.
+
+Each row of the observation matrix contains 10 4-d vectors, but not all vectors represent active game elements.
+Inactive game elements (e.g., the last 5 vectors in $M_{0}$) are represented by their position being placed outside the game grid `(-1, -1)`. 
+> For example, the vector of an inactive cashbag (cashbags are inactive while being carried by a robot) will always be `(-1, -1, 1, 1)`.
+
+**Reward** is when you gain points, this will be appearent in the reward.
+**total_reward** is the total score for your current game.
+**game_ticks** is the number of game tick currently running.
 
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
