@@ -6,7 +6,9 @@ The Robot Robbers game is an interactive 2D game where you, the player, control 
   <img src="../images/robot_robbers.png" width=650>
 </p>
 
-The stars given are in the interval 1, 2, ..., 5. You'll receive 1000 reviews as a list of reveiws. You should return the ratings as a list of floats corresponding to a rating for each review.
+<it>A description of the invididual icons will follow.</it>
+
+The objective of this use case is to reach the highest possible reward in 2 wall-clock minutes. Balance the trade off between time and performance well!
 
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
