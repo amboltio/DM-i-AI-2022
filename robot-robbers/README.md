@@ -122,7 +122,10 @@ where, $Δ_{x,n}$ and $Δ_{y,n}$ are the change in x and y direction for robot n
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation seed. The best score your model achieves on the validation seed will be displayed on the scoreboard. You'll have exactly 2 minutes to play the game for each attempt.
 
-Once you have developed your solution, you should submit it for evaluation. Notice that you can only submit once!!
+Once you have developed your solution, you should submit it for evaluation. 
+
+Notice that you can only submit once! We encourage you to validate your code and API before you submit your final model. You can find the documentation of your API where you can try out your model and verify the prediction. <br>
+The documentation is by default found at `0.0.0.0:4242/docs`, and then find the prediction endpoint for the use case.
 
 After evaluation, your final score will be provided. This score can be seen on the <a href="https://cases.dmiai.dk/">scoreboard</a> shortly after and cannot be changed.
 
