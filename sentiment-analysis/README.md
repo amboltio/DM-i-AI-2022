@@ -39,8 +39,5 @@ def predict(request: SentimentAnalysisRequestDto) -> SentimentAnalysisResponseDt
 
 You can add new packages to the Python environment by adding the names of the packages to requirements.txt and restarting the project, or by using pip install on a terminal within the container which will result in the package being installed temporarily i.e. it is not installed if the project is restarted. <a href="https://emily.ambolt.io/docs/latest">Click here</a> to visit the Emily documentation.
 
-## Testing the connection to the API
-See <a href="https://amboltio.github.io/emily-intro/deploy/test/">this guide</a> for details on how to test your setup before final submission.
-
 ## Submission
 When you are ready for submission, <a href="https://emily.ambolt.io/docs/latest/cli/emily/deploy">click here</a> for instructions on how to deploy. Then, head over to the <a href="https://cases.dmiai.dk/sentiment-analysis">Submission Form</a> and submit your model by providing the host address for your API and your UUID obtained during sign up. Make sure that you have tested your connection to the API before you submit!<br>
