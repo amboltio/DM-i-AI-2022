@@ -1,0 +1,9 @@
+{
+    "id": "YK0MYN",
+    "name": "robot-robbers",
+    "containerName": "emily-robot-robbers-yk0myn",
+    "image": "base",
+    "imageVersion": "2.0.0",
+    "emilyVersion": "3.0.4",
+    "mountTargets": []
+}

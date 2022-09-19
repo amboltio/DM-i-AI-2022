@@ -1,0 +1,4 @@
+gym==0.21
+numpy
+matplotlib
+pygame
