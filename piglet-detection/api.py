@@ -4,13 +4,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse
 
 from static.render import render
-from utilities.environment import Environment
+from utilities.environment import Environment, load_env
 from utilities.logging.config import (initialize_logging,
                                       initialize_logging_middleware)
 from utilities.utilities import get_uptime
 from utilities.exceptions import configure_exception_handlers
 
-import src.controller
+import router
+load_env()
 
 # --- Welcome to your Emily API! --- #
 # See the README for guides on how to test it.
@@ -35,7 +36,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(src.controller.router, tags=['Pig Detection'])
+app.include_router(router.router, tags=['Pig Detection'])
 
 
 @app.get('/api')

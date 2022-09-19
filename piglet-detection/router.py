@@ -5,7 +5,7 @@ import numpy as np
 from typing import List
 from loguru import logger
 from fastapi import APIRouter
-from src.dtos import PredictRequestDto, PredictResponseDto, BoundingBoxClassification
+from models.dtos import PredictRequestDto, PredictResponseDto, BoundingBoxClassification
 
 
 router = APIRouter()
