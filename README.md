@@ -11,14 +11,15 @@ The API endpoint will be used for submission and is required. <a href="https://a
 <a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/piglet-detection">- Piglet Detection</a> <br>
 <a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/robot-robbers">- Robot Robbers</a> <br> <br>
 
-Clone this GitHub repository to download Emily templates for all four use cases.
+Clone this GitHub repository to download Emily templates for all three use cases.
 ```
 git clone https://github.com/amboltio/DM-i-AI-2022.git
 ```
 Inside the DM-i-AI-2022 folder, you will find the three use cases. To open a use case with Emily type `emily open <use-case>` e.g. `emily open robot-robbers` to open the last use case.
 
 <h2>Emily CLI</h2>
-The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained by <a href="https://ambolt.io/">Ambolt</a> to help developers and teams implement and run production ready machine learning powered micro services fast and easy. <a href="https://emily.ambolt.io/docs/latest">Click here</a> for getting started with Emily. <br>Emily can assist you with developing the required API endpoints for the use cases. Together with every use case a predefined and documented template is provided to ensure correct API endpoints and DTOS for the specific use case. You can find the documentation of the entire framework <a href="https://emily.ambolt.io/docs/latest">here</a>. <br>
+The <a href="https://ambolt.io/emily-ai/">Emily CLI</a> is built and maintained by <a href="https://ambolt.io/">Ambolt</a> to help developers and teams implement and run production ready machine learning powered micro services fast and easy. <a href="https://emily.ambolt.io/docs/latest">Click here</a> for getting started with Emily. If you <a href="https://emily.ambolt.io/register">sign up</a> to Emily using your student email, you can get free access to the full Emily-CLI with Emily Academy. <br> <br>
+Emily can assist you with developing the required API endpoints for the use cases. Together with every use case a predefined and documented template is provided to ensure correct API endpoints and DTOS for the specific use case. You can find the documentation of the entire framework <a href="https://emily.ambolt.io/docs/latest">here</a>. <br>
 The use cases have been built on top of the <a href="https://fastapi.tiangolo.com/">FastAPI</a> framework, and can be used to specify endpoints in every use case.
 
 <h2>Discord Channel</h2>
@@ -43,15 +44,15 @@ The total score is simply an average of your individual scores.<br>
 This format also means that you can loose points / be overtaken by other teams during the week if they submit a model that is better than yours. 
 
 <h3>Deadline for submission</h3>
-The deadline for submission is Monday the 10th of October at 14:00
+The deadline for submission is Monday the 10th of October at 14:00.
 
 <h3>Final evaluation</h3>
 
-Upon completion of the contest, the top 5 highest-ranking teams will be asked to submit their training code and the trained models for validation. The final ranking is announced on 25/10. 
+Upon completion of the contest, the top 3 highest-ranking teams will be asked to submit their training code and the trained models for validation no later than Tuesday the 11th of October at 14:00 (24 hours after the deadline). The final ranking is announced Friday the 14th of October.
 
 <h2>How to get a server for deployment?</h2>
 When you are doing the submission we are expecting you to host the server at which the REST API can be deployed. You can sign up to <a href="https://azure.microsoft.com/da-dk/free/students/">Azure for Students</a>, where you will get free credits that you can use to create a virtual machine. We expect you all to be able to do this, since the competition is only for students. Alternatively, you can also deploy your submission locally (This requires a public IP). <br> 
-The following contain the necessary links for creating a virtual machine: <br> <br>
+The following contains the necessary links for creating a virtual machine: <br> <br>
 
 * <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal">Creating a linux virtual machine</a> <br>
 * <a href="https://docs.microsoft.com/en-us/azure/virtual-machines/linux/use-remote-desktop">Install and configure xrdp to use Remote Desktop</a> <br>

@@ -1,16 +1,16 @@
 # Sentiment Analysis of Amazon Reviews
-In this use case, you will be reciving 1000 unique reviews of various eletronic equipments found on <a href="https://www.amazon.com/">Amazon</a>. Your task is to predict the number of stars for the given review. See the image below for an illustration of the concept.
+In this use case, you will be receiving 1000 unique reviews of various eletronic equipments found on <a href="https://www.amazon.com/">Amazon</a>. Your task is to predict the number of stars for the given review. See the image below for an illustration of the concept.
 
 <p align="center">
-  <img src="../images/amazon_review.jpg" width=650>
+  <img src="../images/amazon_review.jpg" width=800>
 </p>
 
-The stars given are in the interval 1, 2, ..., 5. You'll receive 1000 reviews as a list of reveiws. You should return the ratings as a list of floats corresponding to a rating for each review.
+The stars given are in the interval [1-5]. You'll receive 1000 reviews as a list of reviews. You should return the ratings as a list of floats corresponding to a rating for each review.
 
 ## Evaluation
-During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
+During the week of competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
 
-Your model will be evaluated on how close to the actual ratings your predictions are. To be exact, your score is measured as the distance between your prediction and the actual rating. An average error for all reviews is calculated and used as your score. i.e. the evaluation metric is mean absolute error.
+Your model will be evaluated on how close your predictions are to the actual ratings. To be exact, your score is measured as the distance between your prediction and the actual rating. An average error for all reviews is calculated and used as your score. i.e. the evaluation metric is mean absolute error.
 The score will be normalized in the interval 0.0 to 1.0 and flipped such that a low error grants the most points.
 The validation request timeouts after 30 seconds, so you need to make sure that your solution can handle 1000 reviews in under 30 seconds.
 
@@ -36,11 +36,8 @@ def predict(request: SentimentAnalysisRequestDto) -> SentimentAnalysisResponseDt
 
     return SentimentAnalysisResponseDto(scores=ratings)
 ```
-For further details about the recommended structure, see <a href="https://amboltio.github.io/emily-intro/emily-intro/">this guide</a>.
-You can add new packages to the Python environment by adding the names of the packages to requirements.txt and restarting the project, or by using pip install on a terminal within the container which will result in the package being installed temporarily i.e. it is not installed if the project is restarted. <br>
 
-## Testing the connection to the API
-See <a href="https://amboltio.github.io/emily-intro/deploy/test/">this guide</a> for details on how to test your setup before final submission.
+You can add new packages to the Python environment by adding the names of the packages to requirements.txt and restarting the project, or by using pip install on a terminal within the container which will result in the package being installed temporarily i.e. it is not installed if the project is restarted. <a href="https://emily.ambolt.io/docs/latest">Click here</a> to visit the Emily documentation.
 
 ## Submission
-When you are ready for submission, <a href="https://amboltio.github.io/emily-intro/deploy/">click here</a> for instructions on how to deploy. Then, head over to the <a href="https://cases.dmiai.dk/">Submission Form</a> and submit your model by providing the host address for your API and your UUID obtained during sign up. Make sure that you have tested your connection to the API before you submit!<br>
+When you are ready for submission, <a href="https://emily.ambolt.io/docs/latest/cli/emily/deploy">click here</a> for instructions on how to deploy. Then, head over to the <a href="https://cases.dmiai.dk/sentiment-analysis">Submission Form</a> and submit your model by providing the host address for your API and your UUID obtained during sign up. Make sure that you have tested your connection to the API before you submit!<br>
