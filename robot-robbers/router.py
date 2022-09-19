@@ -2,6 +2,7 @@ import numpy as np
 from fastapi import APIRouter
 from models.dtos import RobotRobbersPredictResponseDto, RobotRobbersPredictRequestDto
 
+
 router = APIRouter()
 
 
