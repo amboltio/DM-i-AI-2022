@@ -51,6 +51,7 @@ The deadline for submission is Monday the 10th of October at 14:00.
 Upon completion of the contest, the top 3 highest-ranking teams will be asked to submit their training code and the trained models for validation no later than Tuesday the 11th of October at 14:00 (24 hours after the deadline). The final ranking is announced Friday the 14th of October.
 
 <h2>How to get a server for deployment?</h2>
+**test**
 **We do not provide servers for training,** hence you are expected to train your models and solutions using your own hardware, Google Colab etc. 
 <br>
 
