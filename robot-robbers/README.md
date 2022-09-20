@@ -137,18 +137,24 @@ emily open robot-robbers
 ```
 A Docker container with a Python environment will be opened. Some content needs to be downloaded the first time a project is opened, this might take a bit of time.
 
-To take full advantage of Emily and the template, your code for prediction should go in api.py:
+A dummy response has been created in ```router.py```. To take full advantage of Emily and the template, your code for the moves should go in here:
 ```python
-@app.post('/api/predict', response_model=RobotRobbersPredictResponseDto)
-def predict(request: RobotRobbersPredictRequestDto) -> RobotRobbersPredictResponseDto:
 
-    moves = [0, 0,
-             0, 0,
-             0, 0,
-             0, 0,
-             0, 0]
+@router.post('/predict', response_model=RobotRobbersPredictResponseDto)
+def predict(request: RobotRobbersPredictRequestDto):
+    # robots = [x for x in request.state[0] if x[0] != -1]
+    # scrooges = [x for x in request.state[1] if x[0] != -1]
+    # cashbags = [x for x in request.state[2] if x[0] != -1]
+    # dropspots = [x for x in request.state[3] if x[0] != -1]
+    # obstacles = request.state[4]
 
-    return RobotRobbersPredictResponseDto(moves=moves)
+    # Your moves go here!
+    n_robbers = 5
+    moves = [np.random.randint(-1, 2) for _ in range(n_robbers * 2)]
+
+    return RobotRobbersPredictResponseDto(
+        moves=moves
+    )
 ```
 You can add new packages to the Python environment by adding the names of the packages to requirements.txt and restarting the project, or by using pip install on a terminal within the container which will result in the package being installed temporarily i.e. it is not installed if the project is restarted. <a href="https://emily.ambolt.io/docs/latest">Click here</a> to visit the Emily documentation.
 
