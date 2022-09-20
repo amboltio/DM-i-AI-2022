@@ -31,7 +31,7 @@ Once the repository is cloned, navigate to the folder using a terminal and type:
 ```
 emily open piglet-detection
 ```
-You will be prompted for selecting an application. For this use case, it might be beneficial to use a Computer Vision image, where you can select your prefered deep learning framework. Afterwards, you will be asked to mount a data folder for your project. This folder should include your data, for the first run it can empty and you can add data later. Then select an editor of your choice to open the Emily template for the use case. A Docker container with a Python environment will be opened. Some content needs to be downloaded the first time a project is opened, this might take a bit of time.
+You will be prompted for selecting an application. Please note, that you need to select a Computer Vision image, if you want to use opencv. Afterwards you can select your prefered deep learning framework. Then select an editor of your choice to open the Emily template for the use case. A Docker container with a Python environment will be opened. Some content needs to be downloaded the first time a project is opened, this might take a bit of time. You can mount a folder with data to your project using the ```emily mount``` command.
 
 A dummy prediction has been created in ```router.py```. To take full advantage of Emily and the template, your code for prediction should go in here:
 ```python
