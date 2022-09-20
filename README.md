@@ -51,7 +51,7 @@ The deadline for submission is Monday the 10th of October at 14:00.
 Upon completion of the contest, the top 3 highest-ranking teams will be asked to submit their training code and the trained models for validation no later than Tuesday the 11th of October at 14:00 (24 hours after the deadline). The final ranking is announced Friday the 14th of October.
 
 <h2>How to get a server for deployment?</h2>
-We do not provide servers dedicated for training, hence you are expected to train your models and solutions using your own hardware, Google Colab etc. <br>
+**We do not provide servers for training**, hence you are expected to train your models and solutions using your own hardware, Google Colab etc. <br>
 
 When you are doing the submission we are expecting you to host the server at which the REST API can be deployed. You can sign up to <a href="https://azure.microsoft.com/da-dk/free/students/">Azure for Students</a>, where you will get free credits that you can use to create a virtual machine. We expect you all to be able to do this, since the competition is only for students. Alternatively, you can also deploy your submission locally (This requires a public IP). <br> 
 The following contains the necessary links for creating a virtual machine: <br> <br>
