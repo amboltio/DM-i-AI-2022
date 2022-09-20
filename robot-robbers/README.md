@@ -142,10 +142,10 @@ A dummy response has been created in ```router.py```. To take full advantage of 
 
 @router.post('/predict', response_model=RobotRobbersPredictResponseDto)
 def predict(request: RobotRobbersPredictRequestDto):
-    # robots = [x for x in request.state[0] if x[0] != -1]
-    # scrooges = [x for x in request.state[1] if x[0] != -1]
-    # cashbags = [x for x in request.state[2] if x[0] != -1]
-    # dropspots = [x for x in request.state[3] if x[0] != -1]
+    # robots = [(x, y, w, h) for (x, y, w, h) in request.state[0] if x >= 0 and y >= 0]
+    # scrooges = [(x, y, w, h) for (x, y, w, h) in request.state[1] if x >= 0 and y >= 0]
+    # cashbags = [(x, y, w, h) for (x, y, w, h) in request.state[2] if x >= 0 and y >= 0]
+    # dropspots = [(x, y, w, h) for (x, y, w, h) in request.state[3] if x >= 0 and y >= 0]
     # obstacles = request.state[4]
 
     # Your moves go here!
