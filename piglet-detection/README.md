@@ -35,15 +35,16 @@ You will be prompted for selecting an application. For this use case, it might b
 
 To take full advantage of Emily and the template, your code for prediction should go in api.py:
 ```python
-@app.post('/api/predict', response_model=PigPredictResponseDto)
-def predict(request: PigPredictRequestDto) -> PigPredictResponseDto:
-    ############ Modify this ##########
-    predictions = []
-    for img in request.img:
-        decoded_img = decode(img)
-        predictions.append(predict(decoded_img))
+@router.post('/predict', response_model=PredictResponseDto)
+def predict_endpoint(request: PredictRequestDto):
+    img: np.ndarray = decode_request(request)
 
-    return PigPredictResponseDto(boxes=predictions)
+    dummy_bounding_boxes = predict(img)
+    response = PredictResponseDto(
+        boxes=dummy_bounding_boxes
+    )
+
+    return response
 ```
 You can add new packages to the Python environment by adding the names of the packages to requirements.txt and restarting the project, or by using pip install on a terminal within the container which will result in the package being installed temporarily i.e. it is not installed if the project is restarted. <a href="https://emily.ambolt.io/docs/latest">Click here</a> to visit the Emily documentation.
 
