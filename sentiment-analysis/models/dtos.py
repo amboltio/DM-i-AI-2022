@@ -7,4 +7,4 @@ class SentimentAnalysisRequestDto(BaseModel):
 
 
 class SentimentAnalysisResponseDto(BaseModel):
-    scores: List[float]
+    scores: List[int]
