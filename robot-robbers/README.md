@@ -155,7 +155,7 @@ You can add new packages to the Python environment by adding the names of the pa
 ## Run the game locally
 To better explore the game's behavior, the game comes with a game engine itself. You can either play the game, using the `run_game.py` script, or create your own script for local experiments. 
 
-Start by initializing of the envuironment: 
+Start by initializing of the environment: 
 ```python
 from game.environment import RobotRobbersEnv
 
