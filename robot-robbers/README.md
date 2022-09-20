@@ -159,9 +159,31 @@ def predict(request: RobotRobbersPredictRequestDto):
 You can add new packages to the Python environment by adding the names of the packages to requirements.txt and restarting the project, or by using pip install on a terminal within the container which will result in the package being installed temporarily i.e. it is not installed if the project is restarted. <a href="https://emily.ambolt.io/docs/latest">Click here</a> to visit the Emily documentation.
 
 ## Run the game locally
-To better explore the game's behavior, the game comes with a game engine itself. You can either play the game, using the `run_game.py` script, or create your own script for local experiments. 
+To better explore the game's behavior, you can run the game locally. 
 
-Start by initializing of the environment: 
+### Virtual Environment
+Start by setting up the environment, for example using either venv or conda:
+```shell 
+python -m venv .venv
+source .venv/bin/activate # bash
+.venv\Scripts\activate.bat # cmd
+.venv\Scripts\Activate.ps1 # PowerShell
+```
+
+```shell 
+conda create -n robot_robbers
+conda activate robot_robbers
+```
+
+### Install dependencies
+```shell 
+pip install -r requirements.txt
+```
+
+### Experiment locally
+You can either play the game, using the `run_game.py` script, or create your own script for local experiments. 
+
+To create a custom script, start by initializing of the environment: 
 ```python
 from game.environment import RobotRobbersEnv
 
