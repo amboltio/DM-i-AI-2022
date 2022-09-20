@@ -9,14 +9,15 @@ The Robot Robbers game is an interactive 2D game where you, the player, control 
 
 The objective of this use case is to reach the highest possible reward in 2 wall-clock minutes. Balance the trade off between time and performance well!
 
-## How to play
+## About the game
 Every game runs in a 128x128 grid environment. Every game is initialized with:
 
 1. 5 robots (controlled by the player)
 2. 7 scrooges (controlled by the game)
-3. Between 2-5 obstacles, the height and width of which range between 1 and 20.
-4. 5 cashbags
-5. 3 dropspots
+3. 5 cashbags
+4. 3 dropspots
+5. Between 2-5 obstacles, the height and width of which range between 1 and 20.
+
 All of these are randomly placed at every game start.
 You will recive the states at your prediction endpoint for every game tick.
 
@@ -136,20 +137,75 @@ emily open robot-robbers
 ```
 A Docker container with a Python environment will be opened. Some content needs to be downloaded the first time a project is opened, this might take a bit of time.
 
-To take full advantage of Emily and the template, your code for prediction should go in api.py:
+A dummy response has been created in ```router.py```. To take full advantage of Emily and the template, your code for the moves should go in here:
 ```python
-@app.post('/api/predict', response_model=RobotRobbersPredictResponseDto)
-def predict(request: RobotRobbersPredictRequestDto) -> RobotRobbersPredictResponseDto:
 
-    moves = [0, 0,
-             0, 0,
-             0, 0,
-             0, 0,
-             0, 0]
+@router.post('/predict', response_model=RobotRobbersPredictResponseDto)
+def predict(request: RobotRobbersPredictRequestDto):
+    # robots = [(x, y, w, h) for (x, y, w, h) in request.state[0] if x >= 0 and y >= 0]
+    # scrooges = [(x, y, w, h) for (x, y, w, h) in request.state[1] if x >= 0 and y >= 0]
+    # cashbags = [(x, y, w, h) for (x, y, w, h) in request.state[2] if x >= 0 and y >= 0]
+    # dropspots = [(x, y, w, h) for (x, y, w, h) in request.state[3] if x >= 0 and y >= 0]
+    # obstacles = request.state[4]
 
-    return RobotRobbersPredictResponseDto(moves=moves)
+    # Your moves go here!
+    n_robbers = 5
+    moves = [np.random.randint(-1, 2) for _ in range(n_robbers * 2)]
+
+    return RobotRobbersPredictResponseDto(
+        moves=moves
+    )
 ```
 You can add new packages to the Python environment by adding the names of the packages to requirements.txt and restarting the project, or by using pip install on a terminal within the container which will result in the package being installed temporarily i.e. it is not installed if the project is restarted. <a href="https://emily.ambolt.io/docs/latest">Click here</a> to visit the Emily documentation.
+
+## Run the game locally
+To better explore the game's behavior, you can run the game locally. 
+
+### Virtual Environment
+Start by setting up the environment, for example using either venv or conda:
+```shell 
+python -m venv .venv
+source .venv/bin/activate # bash
+.venv\Scripts\activate.bat # cmd
+.venv\Scripts\Activate.ps1 # PowerShell
+```
+
+```shell 
+conda create -n robot_robbers
+conda activate robot_robbers
+```
+
+### Install dependencies
+```shell 
+pip install -r requirements.txt
+```
+
+### Experiment locally
+You can either play the game, using the `run_game.py` script, or create your own script for local experiments. 
+
+To create a custom script, start by initializing of the environment: 
+```python
+from game.environment import RobotRobbersEnv
+
+env = RobotRobbersEnv()
+state = env.reset()
+```
+You can then move your robots and recieve the new state:
+```python
+while True:
+  moves = [randint(-1,1) for _ in range(env.n_robbers * 2)]
+  state, reward, is_done, info = env.step(moves)
+```
+You can also view and alter the environment itself, but be aware of the bias you are introducing.
+```python
+  env.max_n_scrooges = 1
+  env.max_n_dropspots = 1
+  env.max_n_cashbags = 1
+  env.max_n_dropspots = 1
+  env.max_n_obstacles = 0
+  env.n_robbers = 1
+  state = env.reset()
+```
 
 ## Submission 
 When you are ready for submission, <a href="https://emily.ambolt.io/docs/latest/cli/emily/deploy">click here</a> for instructions on how to deploy. Then, head over to the <a href="https://cases.dmiai.dk/robot-robbers">Submission Form</a> and submit your model by providing the host address for your API and your UUID obtained during sign up. Make sure that you have tested your connection to the API before you submit!<br>
