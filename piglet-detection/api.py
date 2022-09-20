@@ -42,7 +42,7 @@ app.include_router(router.router, tags=['Pig Detection'])
 @app.get('/api')
 def hello():
     return {
-        "service": Environment().COMPOSE_PROJECT_NAME,
+        "service": "piglet-detection-usecase",
         "uptime": get_uptime()
     }
 

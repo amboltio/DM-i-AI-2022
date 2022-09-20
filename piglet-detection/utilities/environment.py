@@ -9,7 +9,6 @@ class Environment(BaseSettings):
 
     HOST_IP: str
     CONTAINER_PORT: int
-    COMPOSE_PROJECT_NAME: str
 
 def load_env():
     # Let the script caller define the .env file to use, e.g.:  python api.py --env .prod.env
