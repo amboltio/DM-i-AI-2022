@@ -42,7 +42,7 @@ app.include_router(router.router, tags=['Robot Robbers'])
 @app.get('/api')
 def hello():
     return {
-        "service": Environment().COMPOSE_PROJECT_NAME,
+        "service": "robot-robbers-usecase",
         "uptime": get_uptime()
     }
 
