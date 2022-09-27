@@ -36,35 +36,15 @@ class RobotRobbersEnv(gym.Env):
         self._robber_cooldown_ticks = 100
 
         # Observation/action spaces
-        self.action_space = spaces.Box(
-            low=-1, high=1, shape=(self.n_robbers * 2,), dtype=np.int8)
-        self.observation_space = spaces.Box(
-            low=-1,
-            high=self.height,
-            shape=self.observation_shape,
-            dtype=np.int16
-        )
+        self._set_space()
+        self._empty_world_state()
 
-        # Empty world state
-        self._robber_positions = np.ones(
-            (self.n_robbers, 2), dtype=np.int16) * -1
-        self._scrooge_positions = np.ones(
-            (self.max_n_scrooges, 2), dtype=np.int16) * -1
-        self._cashbag_positions = np.ones(
-            (self.max_n_cashbags, 2), dtype=np.int16) * -1
-        self._dropspot_positions = np.ones(
-            (self.max_n_dropspots, 2), dtype=np.int16) * -1
-        self._obstacles = np.ones(
-            (self.max_n_obstacles, 4), dtype=np.int16) * -1
-        self._cashbag_carriers = np.zeros((self.n_robbers, ), dtype=np.int16)
-
-        self._robber_cooldown = np.zeros((self.n_robbers, ), dtype=np.int16)
 
         self._reward = 0
         self._total_reward = 0
         self._n_cashbags = 0
         self._n_dropspots = 0
-        self._n_scrooges = 0
+        self._n_scrooges = self.max_n_scrooges
         self._n_obstacles = 0
         self._game_ticks = 0
 
@@ -81,16 +61,65 @@ class RobotRobbersEnv(gym.Env):
         self.cashbag_sprite = None
         self.dropspot_sprite = None
 
+        self._random_n_obstacles = True
+
         # Seeding
         self.random = None
 
-    def reset(self, seed=None) -> tuple:
 
+    def set_n_robbers(self, amount):
+        min_cap = 1
+        max_cap = self.max_n_elements_per_type
+        assert amount >= min_cap, f'Min amount of robbers is {min_cap}'
+        assert amount <= self.max_n_elements_per_type, f'Max amount of robbers is {max_cap}'
+        self.n_robbers = amount
+        self.reset()
+
+
+    def set_n_scrooges(self, amount):
+        min_cap = 0
+        max_cap = min(self.max_n_elements_per_type, self.max_n_scrooges)
+        assert amount >= min_cap, f'Min amount of scrooges is {min_cap}'
+        assert amount <= max_cap, f'Max amount of scrooges is {max_cap}'
+        self._n_scrooges = amount
+        self.reset()
+
+    def set_n_cashbags(self, amount):
+        min_cap = 1
+        max_cap = min(self.max_n_elements_per_type, self.max_n_cashbags)
+        assert amount >= min_cap, f'Min amount of cashbags is {min_cap}'
+        assert amount <= max_cap, f'Max amount of cashbags is {max_cap}'
+        self._n_cashbags = amount
+        self.reset()
+    
+    def set_n_dropspots(self, amount):
+        min_cap = 1
+        max_cap = min(self.max_n_elements_per_type, self.max_n_dropspots)
+        assert amount >= min_cap, f'Min amount of dropspots is {min_cap}'
+        assert amount <= max_cap, f'Max amount of dropspots is {max_cap}'
+        self._n_dropspots = amount
+        self.reset()
+
+    def set_n_obstacles(self, amount):
+        min_cap = 0
+        max_cap = min(self.max_n_elements_per_type, self.max_n_obstacles)
+        assert amount >= min_cap, f'Min amount of obstacles is {min_cap}'
+        assert amount <= max_cap, f'Max amount of obstacles is {max_cap}'
+        self._n_obstacles = amount
+        self._random_n_obstacles = False
+        self.reset()
+
+    def reset(self, seed=None) -> tuple:
         self.seed(seed)
         self.random = np.random.RandomState(seed)
 
-        self._n_scrooges = self.max_n_scrooges
-        self._n_obstacles = self.random.randint(2, self.max_n_obstacles)
+        self._set_space()
+
+        if self._random_n_obstacles:
+            self._n_obstacles = self.random.randint(2, self.max_n_obstacles)
+        
+        self._empty_world_state()
+
 
         for i in range(self._n_obstacles):
             x, y = self._get_free_cell()
@@ -104,6 +133,7 @@ class RobotRobbersEnv(gym.Env):
         for i in range(self.n_robbers):
             self._robber_positions[i, :] = self._get_free_cell()
 
+        self._generate_cash_bags()
         return self._get_observation()
 
     def step(self, actions) -> tuple:
@@ -151,11 +181,7 @@ class RobotRobbersEnv(gym.Env):
         n_cashbags_on_screen = int(self._n_cashbags + self._cashbag_carriers.sum())
 
         if n_cashbags_on_screen < self.max_n_cashbags:
-            for ci in range(self.max_n_cashbags):
-                cix, ciy = self._cashbag_positions[ci]
-                if cix == -1:
-                    self._cashbag_positions[ci, :] = self._get_free_cell()
-                    self._n_cashbags += 1
+            self._generate_cash_bags()
 
         if self._n_dropspots < self.max_n_dropspots:
             self._dropspot_positions[self._n_dropspots, :] = self._get_free_cell()
@@ -257,6 +283,38 @@ class RobotRobbersEnv(gym.Env):
         pygame.event.pump()
         self.clock.tick(60)
         pygame.display.flip()
+
+
+    def _set_space(self):
+        self._set_action_space()
+        self._set_observation_space()
+
+    def _set_action_space(self):
+        self.action_space = spaces.Box(low=-1, high=1, shape=(self.n_robbers * 2,), dtype=np.int8)
+    
+    def _set_observation_space(self):
+        self.observation_space = spaces.Box(
+            low=-1,
+            high=self.height,
+            shape=self.observation_shape,
+            dtype=np.int16
+        )      
+
+    def _empty_world_state(self):
+        self._robber_positions = np.ones((self.n_robbers, 2), dtype=np.int16) * -1
+        self._scrooge_positions = np.ones((self.max_n_scrooges, 2), dtype=np.int16) * -1
+        self._cashbag_positions = np.ones((self.max_n_cashbags, 2), dtype=np.int16) * -1
+        self._dropspot_positions = np.ones((self.max_n_dropspots, 2), dtype=np.int16) * -1
+        self._obstacles = np.ones((self.max_n_obstacles, 4), dtype=np.int16) * -1
+        self._cashbag_carriers = np.zeros((self.n_robbers, ), dtype=np.int16)
+        self._robber_cooldown = np.zeros((self.n_robbers, ), dtype=np.int16)
+
+    def _generate_cash_bags(self):
+        for ci in range(self.max_n_cashbags):
+            cix, _ = self._cashbag_positions[ci]
+            if cix == -1:
+                self._cashbag_positions[ci, :] = self._get_free_cell()
+                self._n_cashbags += 1
 
     def _is_cell_free(self, cx, cy):
         # Out of bounds

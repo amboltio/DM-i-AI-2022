@@ -198,13 +198,13 @@ while True:
 ```
 You can also view and alter the environment itself, but be aware of the bias you are introducing.
 ```python
-  env.max_n_scrooges = 1
-  env.max_n_dropspots = 1
-  env.max_n_cashbags = 1
-  env.max_n_dropspots = 1
-  env.max_n_obstacles = 0
-  env.n_robbers = 1
-  state = env.reset()
+env = RobotRobbersEnv()
+env.set_n_robbers(10)
+env.set_n_scrooges(1)
+env.set_n_cashbags(5)
+env.set_n_dropspots(3)
+env.set_n_obstacles(0)
+state = env.reset()
 ```
 
 ## Submission 
