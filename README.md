@@ -63,3 +63,17 @@ The following contains the necessary links for creating a virtual machine: <br> 
 If you have already used your credicts, reach out to us on either <a href="https://discord.gg/QhTt4Me2AQ">discord</a> or on <a href="mailto:DMiAI@ambolt.io">DMiAI@ambolt.io</a> and we will help you out. However, we cannot provide you with GPU servers, so remember to design your solutions such that they can run inference within the time constraints specified for the independent use cases.<br><br>
 
 **Please note, that we do not provide servers for training!** You are expected to train your models and solutions using your own hardware, Google Colab, etc.
+
+
+<h2>Frequently Asked Questions</h2>
+**Q: Can I use a pretrained model I found on the internet?**
+
+**A:** Yes you are allowed to you a pretrained model for your task. If you can find a pretrained model for your purpose, you would save a lot of time, as you would do if you were solving a problem for a company.
+
+**Q: Should we gather our own data?**
+
+**A:** Yes, you'll not be supplied with data from us. If you need any data to train a model you should go gather data yourself. We are not supplying data, as this might limit the creativity and the freedom of how you approach the use case.
+
+**Q: How do I use Emily to deploy my service?**
+
+**A:** Emily can help you with deployment of your service, in most cases you can get around deployment by typing `emily deploy <your-project>`, you will be asked several questions guiding your towards deployment on your server. In <a href="https://emily.ambolt.io/docs/latest/guides/quick-start">this guide</a> you can read more about how to get started using Emily.
