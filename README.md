@@ -66,6 +66,7 @@ If you have already used your credicts, reach out to us on either <a href="https
 
 
 <h2>Frequently Asked Questions</h2>
+
 **Q: Can I use a pretrained model I found on the internet?**
 
 **A:** Yes you are allowed to you a pretrained model for your task. If you can find a pretrained model for your purpose, you would save a lot of time, as you would do if you were solving a problem for a company.
