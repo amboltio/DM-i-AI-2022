@@ -69,11 +69,11 @@ If you have already used your credicts, reach out to us on either <a href="https
 
 **Q: Can I use a pretrained model I found on the internet?**
 
-**A:** Yes you are allowed to you a pretrained model for your task. If you can find a pretrained model for your purpose, you would save a lot of time, as you would do if you were solving a problem for a company.
+**A:** Yes you are allowed to use a pretrained model for your task. If you can find a pretrained model fitting your purpose, you would save a lot of time, just like you would do if you were solving a problem for a company.
 
 **Q: Should we gather our own data?**
 
-**A:** Yes, you'll not be supplied with data from us. If you need any data to train a model you should go gather data yourself. We are not supplying data, as this might limit the creativity and the freedom of how you approach the use case.
+**A:** Yes. You'll not be supplied with data from us. If you need any data to train a model, you should go gather the data yourself. We are not supplying data, as this might limit the creativity and the freedom of how you approach the use case.
 
 **Q: How do I use Emily to deploy my service?**
 
