@@ -16,7 +16,7 @@ Samples with piglets will only contain what we deem a *visually clear piglet*. T
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
 
-Your model will be evaluated using the COCO mean Average Precission (<a href="https://jonathan-hui.medium.com/map-mean-average-precision-for-object-detection-45c121a31173">COCO mAP</a>). The score ranges from [0-1], with 1 being the highest score.
+Your model will be evaluated using the COCO mean Average Precission (COCO <a href="https://jonathan-hui.medium.com/map-mean-average-precision-for-object-detection-45c121a31173">mAP</a>). The score ranges from [0-1], with 1 being the highest score.
 The validation request timeouts after 10 seconds, so you need to make sure that your solution can handle an images in under 10 seconds.
 
 Notice that you can only submit once! We encourage you to validate your code and API before you submit your final model. You can find the documentation of your API where you can try out your model and verify the prediction. <br>
@@ -24,6 +24,13 @@ The documentation is by default found at `0.0.0.0:4242/docs`, and then find the 
 
 After evaluation, your final score will be provided. This score can be seen on the <a href="https://cases.dmiai.dk/">scoreboard</a> shortly after.
 
+### Evaluation Metric
+We use the <a href="https://pypi.org/project/mean-average-precision/">mean-average-precission</a> package to evaluate you model. Specifically, we use:
+```python
+from mean_average_precision import MetricBuilder
+metric_fn = MetricBuilder.build_evaluation_metric("map_2d", num_classes=2)
+metric_fn.value(iou_thresholds=np.arange(0.5, 1.0, 0.05), recall_thresholds=np.arange(0., 1.01, 0.01), mpolicy='soft')['mAP']
+```
 
 ## Getting started using Emily
 Once the repository is cloned, navigate to the folder using a terminal and type:
