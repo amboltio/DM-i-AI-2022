@@ -32,7 +32,7 @@ emily open piglet-detection
 ```
 You will be prompted for selecting an application. Please note, that you need to select a Computer Vision image, if you want to use opencv. Afterwards you can select your prefered deep learning framework. Then select an editor of your choice to open the Emily template for the use case. A Docker container with a Python environment will be opened. Some content needs to be downloaded the first time a project is opened, this might take a bit of time. You can mount a folder with data to your project using the ```emily mount``` command.
 
-A dummy prediction has been created in ```router.py```. To take full advantage of Emily and the template, your code for prediction should go in here:
+A dummy prediction endpoint has been created in ```router.py```. The uses uses the DTOs from ```models/dto.py```, to ensure that the request and response have the correct format. To take full advantage of Emily and the template, your code for prediction should go in here:
 ```python
 @router.post('/predict', response_model=PredictResponseDto)
 def predict_endpoint(request: PredictRequestDto):
