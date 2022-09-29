@@ -28,7 +28,7 @@ After evaluation, your final score will be provided. This score can be seen on t
 We use the <a href="https://pypi.org/project/mean-average-precision/">mean-average-precission</a> package to evaluate you model. Specifically, we use:
 ```python
 from mean_average_precision import MetricBuilder
-metric_fn = MetricBuilder.build_evaluation_metric("map_2d", num_classes=2)
+metric_fn = MetricBuilder.build_evaluation_metric("map_2d", async_mode=True, num_classes=2)
 # add predictions
 print(f"COCO mAP: {metric_fn.value(iou_thresholds=np.arange(0.5, 1.0, 0.05), recall_thresholds=np.arange(0., 1.01, 0.01), mpolicy='soft')['mAP']}")
 ```
