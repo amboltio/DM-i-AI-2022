@@ -29,7 +29,7 @@ We use the <a href="https://pypi.org/project/mean-average-precision/">mean-avera
 ```python
 from mean_average_precision import MetricBuilder
 metric_fn = MetricBuilder.build_evaluation_metric("map_2d", num_classes=2)
-metric_fn.value(iou_thresholds=np.arange(0.5, 1.0, 0.05), recall_thresholds=np.arange(0., 1.01, 0.01), mpolicy='soft')['mAP']
+print(f"COCO mAP: {metric_fn.value(iou_thresholds=np.arange(0.5, 1.0, 0.05), recall_thresholds=np.arange(0., 1.01, 0.01), mpolicy='soft')['mAP']}")
 ```
 
 ## Getting started using Emily
