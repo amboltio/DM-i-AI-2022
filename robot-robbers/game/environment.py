@@ -89,7 +89,7 @@ class RobotRobbersEnv(gym.Env):
         max_cap = min(self.max_n_elements_per_type, self.max_n_cashbags)
         assert amount >= min_cap, f'Min amount of cashbags is {min_cap}'
         assert amount <= max_cap, f'Max amount of cashbags is {max_cap}'
-        self._n_cashbags = amount
+        self.max_n_cashbags = amount
         self.reset()
     
     def set_n_dropspots(self, amount):
@@ -133,6 +133,8 @@ class RobotRobbersEnv(gym.Env):
         for i in range(self.n_robbers):
             self._robber_positions[i, :] = self._get_free_cell()
 
+        # reset current number of cashbags and regenerate
+        self._n_cashbags = 0
         self._generate_cash_bags()
         return self._get_observation()
 

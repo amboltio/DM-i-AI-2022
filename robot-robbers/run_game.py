@@ -3,7 +3,6 @@ from game.environment import RobotRobbersEnv
 
 env = RobotRobbersEnv()
 env.reset(42)
-env.set_n_cashbags(5)
 env.render()
 sample = env.observation_space.sample()
 
