@@ -36,7 +36,7 @@ print(f"COCO mAP: {metric_fn.value(iou_thresholds=np.arange(0.5, 1.0, 0.05), rec
 ## Getting started using Emily
 Once the repository is cloned, navigate to the folder using a terminal and type:
 ```
-emily open piglet-detection
+emily open pig-piglet-detection
 ```
 You will be prompted for selecting an application. Please note, that you need to select a Computer Vision image, if you want to use opencv. Afterwards you can select your prefered deep learning framework. Then select an editor of your choice to open the Emily template for the use case. A Docker container with a Python environment will be opened. Some content needs to be downloaded the first time a project is opened, this might take a bit of time. You can mount a folder with data to your project using the ```emily mount``` command.
 
