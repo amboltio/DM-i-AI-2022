@@ -8,7 +8,7 @@ Below you can find the three use cases for the DM i AI 2022 event. <br>
 Within each use case, you find a description together with a template that can be used to setup an API endpoint. <br> 
 The API endpoint will be used for submission and is required. <a href="https://ambolt.io/download/">Emily</a> can help with setting up the API, but you should feel free to set them up on your own. The requirements for the API endpoints are specified in the respective use cases. <br> <br>
 <a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/sentiment-analysis">- Sentiment Analysis</a> <br>
-<a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/piglet-detection">- Piglet Detection</a> <br>
+<a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/piglet-detection">- Pig & Piglet Detection</a> <br>
 <a href="https://github.com/amboltio/DM-i-AI-2022/tree/main/robot-robbers">- Robot Robbers</a> <br> <br>
 
 Clone this GitHub repository to download Emily templates for all three use cases.
