@@ -16,12 +16,11 @@ You will only be receiving images of what we deem a *visually clear piglet*. Thu
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
 
-Your model will be evaluated using the mean Average Precission at a 0.5 IoU threshold (mAP@0.5). The score ranges from [0-1], with 1 being the highest score.
+Your model will be evaluated using the COCO mean Average Precission (<a href="https://jonathan-hui.medium.com/map-mean-average-precision-for-object-detection-45c121a31173">COCO mAP</a>). The score ranges from [0-1], with 1 being the highest score.
 The validation request timeouts after 10 seconds, so you need to make sure that your solution can handle an images in under 10 seconds.
 
 Notice that you can only submit once! We encourage you to validate your code and API before you submit your final model. You can find the documentation of your API where you can try out your model and verify the prediction. <br>
 The documentation is by default found at `0.0.0.0:4242/docs`, and then find the prediction endpoint for the use case.
-
 
 After evaluation, your final score will be provided. This score can be seen on the <a href="https://cases.dmiai.dk/">scoreboard</a> shortly after.
 
