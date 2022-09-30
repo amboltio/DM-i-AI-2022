@@ -18,7 +18,7 @@ Notice that you can only submit once! We encourage you to validate your code and
 The documentation is by default found at `0.0.0.0:4242/docs`, and then find the prediction endpoint for the use case.
 
 
-After evaluation, your final score will be provided. This score can be seen on the <a href="https://cases.dmiai.dk/">scoreboard</a> shortly after.
+After evaluation, your final score will be provided. This score can be seen on the <a href="https://cases.dmiai.dk/teams">scoreboard</a> shortly after.
 
 ## Getting started using Emily
 Once the repository is cloned, navigate to the folder using a terminal and type:
