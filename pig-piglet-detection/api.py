@@ -4,14 +4,14 @@ from fastapi.middleware.cors import CORSMiddleware
 from starlette.responses import HTMLResponse
 
 from static.render import render
-from utilities.environment import Environment, load_env
+from utilities.environment import Environment
 from utilities.logging.config import (initialize_logging,
                                       initialize_logging_middleware)
 from utilities.utilities import get_uptime
 from utilities.exceptions import configure_exception_handlers
 
 import router
-load_env()
+
 
 # --- Welcome to your Emily API! --- #
 # See the README for guides on how to test it.
