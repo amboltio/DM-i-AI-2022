@@ -17,4 +17,4 @@ exec gunicorn 'api:app' \
     --timeout=$TIMEOUT \
     --max-requests=$MAX_REQUESTS \
     --max-requests-jitter=$MAX_REQUESTS_JITTER \
-    --graceful-timeout=$GRACEFUL_TIMEOUT
+    --graceful-timeout=$GRACEFUL_TIMEOUT \
