@@ -27,7 +27,7 @@ Come hang out and talk to other competitors of the event on our Discord channel.
 
 <h2>Getting started without emily</h2>
 
-You are not required to use Emily for competing in this event, however, we strongly recommend using Emily if you are not an expert in developing APIs and microservices. If you do not choose to use Emily, you should check the individual template and find the requirements for the different API endpoints. These have to be exactly the same for the evaluation service to work. Inside `<use-case>/models/dtos.py` you can find information on the request and response DTOs, describing the input and output requirements for your API.
+You are not required to use Emily for competing in this event, however, we strongly recommend using Emily if you are not an expert in developing APIs and microservices. If you do not choose to use Emily, you should check the individual template and find the requirements for the different API endpoints. These have to be exactly the same for the evaluation service to work. Inside ```<use-case>/models/dtos.py``` you can find information on the request and response DTOs, describing the input and output requirements for your API.
 
 <h2>Submission</h2>
 When you are ready for submission, head over to the <a href="https://cases.dmiai.dk/">Submission Form</a> and submit your solution for a use case by providing the host address for your API and the API key we have provided to you. Make sure that you have tested and validated your connection to the API before you submit! 
