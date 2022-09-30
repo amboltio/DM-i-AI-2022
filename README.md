@@ -31,7 +31,7 @@ You are not required to use Emily for competing in this event, however, we stron
 
 <h2>Submission</h2>
 When you are ready for submission, head over to the <a href="https://cases.dmiai.dk/">Submission Form</a> and submit your model by providing the host address for your API and your UUID obtained during sign up. Make sure that you have tested and validated your connection to the API before you submit! 
-<a href="https://emily.ambolt.io/docs/v3.0.5/guides/deploy-your-api">click here</a> for a guide on how to deploy your api with Emily (It is recommended that you go through the full getting started guide)<br><br> 
+<a href="https://emily.ambolt.io/docs/v3.0.5/guides/deploy-your-api">Click here</a> for a guide on how to deploy your api with Emily (It is recommended that you go through the full getting started guide).<br><br> 
 
 **You can only submit once per use case.** We highly recommend that you validate your solution before submitting. You can do this on the submission form by using the `QUEUE VALIDATION ATTEMPT` button. You can validate as many times as you like, but you can only evaluate once per use case. When you queue validation, your score from the run will show up on the scoreboard, so you can see how you compare to the other teams.
 
