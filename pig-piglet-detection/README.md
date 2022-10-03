@@ -7,7 +7,7 @@ You will be receiving images of animals, where you need to predict the bounding 
   <img src="../images/example2.jpg" width=500>
 </p>
 
-All the images have been rescaled to have a fixed width of 640 px. A single image can contain up to 15 objects. **You have 10 seconds to return your predictions for each image.**
+All the images have been rescaled to have a fixed width of 640 px. A single image can contain up to 33 objects. **You have 10 seconds to return your predictions for each image.**
 Samples with piglets will only contain what we deem a *visually clear piglet*. Thus, if it has been difficult to assess wheter an image contains a pig or a piglet, the image is removed. Such an example is given below.
 <p align="center">
   <img src="../images/removed_sample2.jpg" width=375>
