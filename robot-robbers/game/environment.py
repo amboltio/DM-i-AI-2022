@@ -142,7 +142,7 @@ class RobotRobbersEnv(gym.Env):
                     self._robber_cooldown[i] = self._robber_cooldown_ticks
 
                     if has_cashbags:
-                        self._reward -= 10
+                        self._reward -= 3
                         self._cashbag_carriers[i] = 0
 
         # Move scrooges
