@@ -67,7 +67,7 @@ The scrooges are the game antagonists. They will try their very best to keep the
 
 Initially, scrooges will move around randomly on the map.
 
-If a robot carrying cashbags intersects with a scrooge, the cashbags are taken away and the player receives a -10 reward penalty.
+If a robot carrying cashbags intersects with a scrooge, the cashbags are taken away and the player receives a -3 reward penalty.
 
 If a robot is within a distance of 15 units of a scrooge, the scrooge will chase the robot until:
 
