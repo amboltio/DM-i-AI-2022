@@ -7,11 +7,12 @@ You will be receiving images of animals, where you need to predict the bounding 
   <img src="../images/example2.jpg" width=500>
 </p>
 
-All the images have been rescaled to have a fixed width of 640 px. A single image can contain up to 33 objects. **You have 10 seconds to return your predictions for each image.**
+The images have a maximum width of 800 px. A single image can contain up to 33 objects. **You have 10 seconds to return your predictions for each image.**
 Samples with piglets will only contain what we deem a *visually clear piglet*. Thus, if it has been difficult to assess wheter an image contains a pig or a piglet, the image is removed. Such an example is given below.
 <p align="center">
   <img src="../images/removed_sample2.jpg" width=375>
 </p>
+Two annotated sample images are found in the ```data``` folder. The annotations are based on the ```YOLO 1.1``` format. 
 
 ## Evaluation
 During the week of the competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
