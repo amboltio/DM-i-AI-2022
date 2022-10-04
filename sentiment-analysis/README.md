@@ -5,7 +5,7 @@ In this use case, you will be receiving 1000 unique reviews of various eletronic
   <img src="../images/amazon_review.jpg" width=800>
 </p>
 
-The stars given are in the interval [1-5]. You'll receive 1000 reviews as a list of reviews. You should return the ratings as a list of floats corresponding to a rating for each review.
+The stars given are in the interval [1-5]. You'll receive 1000 reviews as a list of reviews. You should return the ratings as a list of floats corresponding to a rating for each review. You can find some example data in the `data` folder.
 
 ## Evaluation
 During the week of competition, you will be able to validate your solution against a validation set. The best score your model achieves on the validation set will be displayed on the scoreboard.
